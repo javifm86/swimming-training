@@ -8,6 +8,7 @@ import { AuthModule } from './auth/auth.module';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from '../environments/environment';
 import { RouterState, StoreRouterConnectingModule } from '@ngrx/router-store';
+import { EffectsModule } from '@ngrx/effects';
 
 @NgModule({
   declarations: [AppComponent],
@@ -23,7 +24,8 @@ import { RouterState, StoreRouterConnectingModule } from '@ngrx/router-store';
     StoreRouterConnectingModule.forRoot({
       stateKey: 'router',
       routerState: RouterState.Minimal
-    })
+    }),
+    EffectsModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
