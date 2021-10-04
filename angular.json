@@ -102,5 +102,8 @@
       }
     }
   },
-  "defaultProject": "swimming-training"
+  "defaultProject": "swimming-training",
+  "cli": {
+    "defaultCollection": "@ngrx/schematics"
+  }
 }
