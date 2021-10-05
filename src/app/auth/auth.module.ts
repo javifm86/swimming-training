@@ -6,6 +6,8 @@ import { StoreModule } from '@ngrx/store';
 import { authReducer } from './reducers';
 import { EffectsModule } from '@ngrx/effects';
 import { AuthEffects } from './auth.effects';
+import { AuthService } from './auth.service';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [LoginComponent],
@@ -13,7 +15,10 @@ import { AuthEffects } from './auth.effects';
     CommonModule,
     RouterModule.forChild([{ path: '', component: LoginComponent }]),
     StoreModule.forFeature('auth', authReducer),
-    EffectsModule.forFeature([AuthEffects])
-  ]
+    EffectsModule.forFeature([AuthEffects]),
+    FormsModule,
+    ReactiveFormsModule
+  ],
+  providers: [AuthService]
 })
 export class AuthModule {}

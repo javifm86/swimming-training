@@ -1,25 +1,30 @@
-<div class="mb-3">
-  <label for="username">User</label>
-  <input type="text" id="username" class="block" />
-</div>
-<div class="mb-6">
-  <label for="password">Password</label>
-  <input type="password" id="password" class="block" />
-</div>
-<div>
-  <button
-    class="
-      py-2
-      px-4
-      bg-blue-500
-      text-white
-      font-semibold
-      rounded-lg
-      shadow-md
-      hover:bg-blue-700
-      focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75
-    "
-  >
-    Send
-  </button>
-</div>
+<form (ngSubmit)="onSubmit()" [formGroup]="loginForm">
+  <div class="mb-3">
+    <label for="username">User</label>
+    <input type="text" formControlName="username" id="username" class="block" />
+  </div>
+  <div class="mb-6">
+    <label for="password">Password</label>
+    <input type="password" formControlName="password" id="password" class="block" />
+  </div>
+  <div>
+    <button
+      class="
+        py-2
+        px-4
+        bg-blue-500
+        text-white
+        font-semibold
+        rounded-lg
+        shadow-md
+        hover:bg-blue-700
+        focus:outline-none
+        focus:ring-2
+        focus:ring-blue-400
+        focus:ring-opacity-75
+      "
+    >
+      Send
+    </button>
+  </div>
+</form>
