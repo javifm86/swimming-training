@@ -11,6 +11,7 @@ import { RouterState, StoreRouterConnectingModule } from '@ngrx/router-store';
 import { EffectsModule } from '@ngrx/effects';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AuthInterceptor } from './api-auth-interceptor';
+import { metaReducers, reducers } from './reducers';
 
 @NgModule({
   declarations: [AppComponent],
@@ -19,7 +20,7 @@ import { AuthInterceptor } from './api-auth-interceptor';
     AppRoutingModule,
     AuthModule,
     HttpClientModule,
-    StoreModule.forRoot({}, {}),
+    StoreModule.forRoot(reducers, { metaReducers }),
     StoreDevtoolsModule.instrument({
       maxAge: 25,
       logOnly: environment.production
