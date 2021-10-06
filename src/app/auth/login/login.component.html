@@ -5,9 +5,14 @@
   </div>
   <div class="mb-6">
     <label for="password">Password</label>
-    <input type="password" formControlName="password" id="password" class="block" />
+    <input
+      type="password"
+      formControlName="password"
+      id="password"
+      class="block"
+    />
   </div>
-  <div>
+  <div class="mb-4">
     <button
       class="
         py-2
@@ -26,5 +31,8 @@
     >
       Send
     </button>
+  </div>
+  <div class="bg-yellow-200 text-yellow-900 px-4 py-2" *ngIf="error">
+    Introduced user or password is not correct
   </div>
 </form>
