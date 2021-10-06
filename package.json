@@ -7,7 +7,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "server": "node ./server/server.js",
+    "server": "nodemon ./server/server.js",
     "server2": "json-server --watch ./server/db.json --port 5000 --delay 3000"
   },
   "private": true,
@@ -44,6 +44,7 @@
     "karma-coverage": "~2.0.3",
     "karma-jasmine": "~4.0.0",
     "karma-jasmine-html-reporter": "~1.7.0",
+    "nodemon": "^2.0.13",
     "prettier": "2.4.1",
     "tailwindcss": "^2.2.16",
     "typescript": "~4.3.5"
