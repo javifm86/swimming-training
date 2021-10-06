@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
+import { Router } from '@angular/router';
 import { Store } from '@ngrx/store';
 import { of } from 'rxjs';
 import { catchError, tap } from 'rxjs/operators';
@@ -21,7 +22,8 @@ export class LoginComponent implements OnInit {
 
   constructor(
     private authService: AuthService,
-    private store: Store<AppState>
+    private store: Store<AppState>,
+    private router: Router
   ) {}
 
   ngOnInit(): void {}
@@ -33,7 +35,9 @@ export class LoginComponent implements OnInit {
     this.authService.login(user, password).subscribe(
       {
         next: (user) => {
+          this.error = false;
           this.store.dispatch(login({ user }));
+          this.router.navigateByUrl('/trainings');
         },
         error: (err) => {
           this.error = true;
