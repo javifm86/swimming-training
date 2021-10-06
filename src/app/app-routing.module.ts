@@ -3,6 +3,12 @@ import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
+    path: 'trainings',
+    loadChildren: () =>
+      import('./trainings/trainings.module').then((m) => m.TrainingsModule),
+    // canActivate: [AuthGuard]
+  },
+  {
     path: '**',
     redirectTo: '/'
   }
