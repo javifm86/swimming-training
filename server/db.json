@@ -1,5 +1,57 @@
 {
- "test": {
-   "a": "a"
- }
+  "cats": [
+    {
+      "name": "Brazada de crol",
+      "id": 1
+    },
+    {
+      "name": "Patada",
+      "id": 2
+    },
+    {
+      "name": "Cabeza",
+      "id": 3
+    },
+    {
+      "name": "Brazo/antebrazo",
+      "id": 4
+    }
+  ],
+  "exercises": [
+    {
+      "id": 1,
+      "cat": 1,
+      "name": "Fase subacuática",
+      "note": "Puedes practicar esto en muchos otros ejercicios de técnica, pero quería remarcarlo por separado ya que es uno de los movimientos más importantes",
+      "intro": "Muchos nadadores que empiezan (o que empezaron a nadar por su cuenta, sin un entrenador) suelen pasar por alto los detalles de esta fase: Si haces bien la parte subacuática de la brazada, avanzarás más con la misma fuerza que ya usas para mover el brazo hasta ahora Eso significa menos brazadas por largo, así que menos movimiento innecesario. O sea, menos cansancio",
+      "description": " <p>La brazada debería empezar con la mano en el frente:</p> <ul> <li>Las yemas de los dedos ligeramente por debajo de los nudillos</li> <li>Estos por debajo de la muñeca</li> <li>Y la muñeca más abajo que el codo</li> </ul> <p>El movimiento correcto:</p> <p>Al empezar la brazada, empuja agua hacia fuera, girando la mano ligeramente para que el pulgar quede hacia abajo.</p> <p>Unos 20-25 cm en esa dirección, y empieza a empujar el agua hacia dentro, girando la mano para que el pulgar quede hacia arriba y pase por debajo de tu cuerpo</p> <p>Avanza hasta que el brazo quede completamente estirado, en tu costado y con el pulgar pegado a tu cuerpo</p>",
+      "end": "<p>Si te ayuda, usa un pull-buoy para poder olvidarte de las piernas sin hundirte</p> <p>Y así fijarte en lo que haces con las manos, codos, brazos</p> <p>Si quieres aumentar la carga y notar aun más el movimiento, usa unas palas para dedos (si ya tienes experiencia previa usándolas)</p> <p>Mira en este video a Ian Thorpe realizando brazadas perfectas (lo de menos es que nades más o menos rápido, fíjate en el movimiento del brazo, eso es lo que deberías imitar):</p>",
+      "video": "https://www.youtube.com/watch?v=2b1Fiw9uekM"
+    },
+    {
+      "id": 8,
+      "cat": 2,
+      "name": "Patada lateral con brazo extendido",
+      "intro": "Te ayudará a mejorar tu patada, y la posición general del cuerpo respecto a las piernas",
+      "description": "<p>Este ejercicio consiste en nadar sobre un costado:</p> <ul> <li>El brazo que quede en la parte de abajo deberá ir estirado, con tu cabeza reposando sobre él</li> <li>Y el de la parte superior, estirado sobre tu costado superior</li> <p>Mantén tu cabeza alineada con el cuerpo, en la postura en la que quedaría si fueras nadando en posición normal</p> <p>Y gírala hacia arriba (hacia el brazo que reposa) para respirar, con un giro como el que harías al nadar a crol</p> ",
+      "end": "<p>Usa unas aletas si quieres añadir más carga mientras hagas técnica de natación. Puedes hacer un largo sobre cada costado</p>",
+      "video": "https://www.youtube.com/watch?v=0mjZsk8L0M0"
+    },
+    {
+      "id": 14,
+      "cat": 3,
+      "name": "Un brazo al frente",
+      "intro": "<p>Deberías llevar la cabeza a unos 45º</p><p>Es decir, si alineada con tu cuerpo (mirando al fondo mientras nadas) es 0º, levántala hasta más o menos 45º</p><p>Y al respirar, el giro deberá ser de 90º hacia un lado, como máximo</p>",
+      "description": "<p>En este ejercicio, mantén una mano en el frente, agarrando un pullbuoy</p> <p>El otro brazo debería funcionar con normalidad</p> <p>Hacer la brazada completa y parar delante un par de segundos antes de dar la siguiente brazada</p>",
+      "end": "<p>La idea de este ejercicio es que te fijes todo el rato en lo que haces con la cabeza.</p> <ul> <li>Cómo la colocas cuando los brazos están delante</li> <li>Cómo haces el giro lateral para respirar junto con el brazo</li> <li>Y cómo vuelve a la posición de reposo correcta al llevar la mano al frente</li> </ul> <p>Muchos nadadores tienen el hábito de girar hasta 100º o más, y eso ladeará demasiado tu cuerpo, frenando tu avance</p> <p>Recuerda también no levantar la cabeza hacia delante, solo estrictamente hacia un lado</p>"
+    },
+    {
+      "id": 16,
+      "cat": 4,
+      "name": "Nadar con los puños",
+      "intro": "<p>Este ejercicio te permite darte cuenta de la importancia de los antebrazos</p> <p>La superficie que empuja agua en esta parte pasa desapercibida ya que pensamos que toda la fuerza la hacemos con la mano</p>",
+      "description": "Cierra los puños. Nada como lo harías de normal, sintiendo el agua en los antebrazos",
+      "end": "<p>Al principio te parecerá que no avanzas, pero sigue y prueba a colocar el antebrazo en una posición distinta:</p> <ul> <li>Girándolo ligeramente o inclinándolo con respecto al codo</li> <li>Hasta que encuentres lo que mejor te funciona</li> <p>Deberías nadar un largo así y otro normal, para percibir realmente la diferencia</p> <p>Fíjate atentamente en los antebrazos en ambos largos</p>"
+    }
+  ]
 }
