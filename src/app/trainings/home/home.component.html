@@ -1,1 +1,49 @@
-<p>home works!</p>
+<h1 class="text-center text-4xl font-bold mb-8">What do you want to do?</h1>
+<div class="grid grid-cols-2 gap-6">
+  <section>
+    <a
+      class="inline-block p-1 w-full text-blue-700 hover:text-blue-500 group"
+      [routerLink]="['/trainings/exercises']"
+    >
+      <div class="relative pb-1/2 sm:pb-7/12">
+        <img
+          src="assets/exercises.jpg"
+          class="
+            absolute
+            h-full
+            w-full
+            object-cover
+            shadow
+            filter
+            grayscale
+            group-hover:filter-none
+          "
+        />
+      </div>
+      <p class="text-2xl">Browse exercises</p>
+    </a>
+  </section>
+  <section>
+    <a
+      class="inline-block p-1 w-full text-blue-700 hover:text-blue-500 group"
+      href="#"
+    >
+      <div class="relative pb-1/2 sm:pb-7/12">
+        <img
+          src="assets/trainings.jpg"
+          class="
+            absolute
+            h-full
+            w-full
+            object-cover
+            shadow
+            filter
+            grayscale
+            group-hover:filter-none
+          "
+        />
+      </div>
+      <p class="text-2xl">Generate training</p>
+    </a>
+  </section>
+</div>
