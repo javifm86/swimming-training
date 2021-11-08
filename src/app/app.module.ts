@@ -12,6 +12,7 @@ import { EffectsModule } from '@ngrx/effects';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AuthInterceptor } from './api-auth-interceptor';
 import { metaReducers, reducers } from './reducers';
+import { EntityDataModule } from '@ngrx/data';
 
 @NgModule({
   declarations: [AppComponent],
@@ -29,6 +30,7 @@ import { metaReducers, reducers } from './reducers';
       stateKey: 'router',
       routerState: RouterState.Minimal
     }),
+    EntityDataModule.forRoot({}),
     EffectsModule.forRoot()
   ],
   providers: [
