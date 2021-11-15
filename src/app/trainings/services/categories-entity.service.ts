@@ -3,11 +3,11 @@ import {
   EntityCollectionServiceBase,
   EntityCollectionServiceElementsFactory
 } from '@ngrx/data';
-import { Exercise } from '../models/exercise.model';
+import { Category } from '../models/category.model';
 
 @Injectable()
-export class ExerciseEntityService extends EntityCollectionServiceBase<Exercise> {
+export class CategoriesEntityService extends EntityCollectionServiceBase<Category> {
   constructor(serviceElementsFactory: EntityCollectionServiceElementsFactory) {
-    super('Exercise', serviceElementsFactory);
+    super('Categories', serviceElementsFactory);
   }
 }

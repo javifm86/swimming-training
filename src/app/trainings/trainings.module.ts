@@ -9,7 +9,10 @@ import {
   EntityMetadataMap
 } from '@ngrx/data';
 import { ExerciseEntityService } from './services/exercise-entity.service';
-import { ExerciseDataService } from './services/courses-data.service';
+import { ExerciseDataService } from './services/exercise-data.service';
+import { CategoriesDataService } from './services/categories-data.service';
+import { CategoriesEntityService } from './services/categories-entity.service';
+import { ExercisesResolver } from './services/exercises.resolver';
 
 export const trainingRoutes: Routes = [
   {
@@ -18,12 +21,21 @@ export const trainingRoutes: Routes = [
   },
   {
     path: 'exercises',
-    component: ExercisesComponent
+    component: ExercisesComponent,
+    resolve: {
+      courses: ExercisesResolver
+    }
   }
 ];
 
 const entityMetadata: EntityMetadataMap = {
   Exercise: {
+    // sortComparer: compareCourses,
+    entityDispatcherOptions: {
+      optimisticUpdate: true
+    }
+  },
+  Categories: {
     // sortComparer: compareCourses,
     entityDispatcherOptions: {
       optimisticUpdate: true
@@ -34,15 +46,23 @@ const entityMetadata: EntityMetadataMap = {
 @NgModule({
   declarations: [HomeComponent, ExercisesComponent],
   imports: [CommonModule, RouterModule.forChild(trainingRoutes)],
-  providers: [ExerciseEntityService, ExerciseDataService]
+  providers: [
+    ExerciseEntityService,
+    ExerciseDataService,
+    CategoriesEntityService,
+    CategoriesDataService,
+    ExercisesResolver
+  ]
 })
 export class TrainingsModule {
   constructor(
     private eds: EntityDefinitionService,
     private entityDataService: EntityDataService,
-    private exerciseDataService: ExerciseDataService
+    private exerciseDataService: ExerciseDataService,
+    private categoriesDataService: CategoriesDataService
   ) {
     eds.registerMetadataMap(entityMetadata);
     entityDataService.registerService('Exercise', exerciseDataService);
+    entityDataService.registerService('Categories', categoriesDataService);
   }
 }

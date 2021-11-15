@@ -1,1 +1,23 @@
-<p>exercises works!</p>
+<div
+  *ngIf="error$ | async; else exerciseBlock"
+  class="bg-red-100 text-red-900 px-4 py-2"
+>
+  Se ha producido un error cargando los ejercicios
+</div>
+<ng-template #exerciseBlock>
+  <div
+    *ngFor="let exercise of exercises$ | async; index as i"
+    class="prose max-w-none mb-10"
+  >
+    <h2 class="text-gray-700 font-bold">{{ exercise.name }}</h2>
+    <div
+      class="mb-3 bg-purple-100 px-4 py-2"
+      [innerHTML]="exercise.note"
+      *ngIf="exercise.note"
+    ></div>
+    <div class="mb-3" [innerHTML]="exercise.intro"></div>
+    <div class="mb-3" [innerHTML]="exercise.description"></div>
+    <div class="mb-3" [innerHTML]="exercise.end"></div>
+    <div *ngIf="exercise.video">{{ exercise.video }}</div>
+  </div>
+</ng-template>
